@@ -8,10 +8,12 @@ body {
 
 }
 
+
 #ic{
-    width: 20%;
+    width: 15%;
     margin: 0 auto;
 }
+
 
 #nav{
     background-color: #000000;
@@ -21,6 +23,16 @@ body {
 #titu{
     font-family: 'Rokkitt';
     color: white;
-    font-size: 30px;
+    font-size: 36px;
 }
 
+#navli{
+    color: white;
+    font-family: 'Rokkitt';
+    font-size: 22px;
+}
+
+#icon{
+    font-size: 22px;
+    color: white;
+}
