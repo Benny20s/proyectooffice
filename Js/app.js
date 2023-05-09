@@ -1,4 +1,4 @@
-Let listaEmpleados = [];
+let listaEmpleados = [];
 
 const objempleado = {
     id:'',
@@ -8,7 +8,7 @@ const objempleado = {
     email: ''
 }
 
-Let editando = false;
+let editando = false;
 
 const formulario = document.querySelector('#formulario');
 const rutInput = document.querySelector('#rut');
