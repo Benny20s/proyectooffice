@@ -24,11 +24,12 @@ function validarFormulario(e) {
 
     if(rutInput.values === '' || puestoInput.values === ''){
         alert('Todos los campos son obligatorios.');
-    return;
+        return;
     }
+    
     if(editando) {
         //aditarEmpleado();
-        editando = false
+        editando = false;
     } else {
         objempleado.id = Date.now();
         objempleado.rut = rutInput.values;
@@ -39,8 +40,9 @@ function validarFormulario(e) {
         agregarEmpleado();
     }
 }
-    function agregarEmpleado() {
-    listaEmpleados.puag({...objempleado});
+
+function agregarEmpleado() {
+    listaEmpleados.push({...objempleado});
 
     mostrarEmpleados();
 }
@@ -48,11 +50,11 @@ function validarFormulario(e) {
 function mostrarEmpleados(){
     const divEmpleados = document.querySelector('.div-empleados');
 
-    listaEmpleados.forEach( emplado => {
+    listaEmpleados.forEach( empleado => {
         const {id, rut, cargo, nombre, email} = empleado;
         
         const parrafo = document.createElement('p');
-        parrafo.textContent = ´${id} - ´${rut} - ´${cargo} - ´${nombre} - ´${email} - ´;
+        parrafo.textContent = '${id} - ${rut} - ${cargo} - ${nombre} - ${email} - ';
         parrafo.dataset.id = id;
 
         const editarBoton = document.createElement('button');
